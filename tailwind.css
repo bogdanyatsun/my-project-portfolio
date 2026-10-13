@@ -1,0 +1,20 @@
+
+@import "tailwindcss";
+
+@source "./index.html";
+
+@theme {
+    --color-dark: #000000;
+    --color-darker: #111111;
+    --color-card: #19161C;
+    --color-textGray: #848895;
+    --color-textLight: #C4C4C4;
+    --color-textLighter: #BABABA;
+    --color-neonGreen: #19FB9B;
+
+    --font-sans: Helvetica, Arial, sans-serif;
+    --font-accent: Roboto, sans-serif;
+
+    --background-image-purple-grad: linear-gradient(90deg, #8C01FA 0%, #000000 100%);
+    --background-image-blue-grad: linear-gradient(90deg, #0047FF 0%, #00BCD4 100%);
+}

@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.rings-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ring-left {
+  position: absolute;
+  top: 20px;
+  left: -160px;
+  width: 320px;
+  height: auto;
+  opacity: 0.35;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ring-right {
+  position: absolute;
+  top: 0px;
+  right: -160px;
+  width: 320px;
+  height: auto;
+  opacity: 0.35;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 1024px) {
+  .ring-left {
+    top: -50px;
+    left: calc(50% - 195px - 760px);
+    right: auto;
+    width: 760px;
+    max-width: none;
+    opacity: 1;
+  }
+
+  .ring-right {
+    top: -50px;
+    left: calc(50% + 195px);
+    right: auto;
+    width: 760px;
+    max-width: none;
+    opacity: 1;
+  }
+}
+
+/* Фоновое изображение на всю ширину и высоту секции */
+.community-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/fon.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+
+.community-bg-2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1200px;
+  max-width: 100%;
+  height: 100%;
+
+  background-image: url('images/fon_2.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+
+  opacity: 0.85;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+@media (max-width: 1023px) {
+  .community-bg-2 {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .community-bg {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+html {
+    scroll-behavior: smooth;
+}
